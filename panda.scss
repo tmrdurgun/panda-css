@@ -11,7 +11,7 @@ $second-color: #fff;
 $second-color-light: #fff;
 $second-color-hard: #f6f6f6;
 
-$second-color-r: 255; 
+$second-color-r: 255;
 $second-color-g: 255;
 $second-color-b: 255;
 
@@ -113,7 +113,7 @@ $page-nav-btn-panda-clr: #737373;
 .zIndex-2{z-index: 2;}
 .zIndex-3{z-index: 3;}
 
-/* Functions */ 
+/* Functions */
 
 // Strip the units from a value
 // ----------------------------
@@ -154,11 +154,11 @@ $page-nav-btn-panda-clr: #737373;
 	background-color: rgba($r,$g,$b,$a);
 }
 
-@mixin hr-box($height, $clr){
+@mixin hrBox($height, $clr){
 	display: block; @extend .float-clear; width: 100%; height: $height; background: $clr;
 }
 
-@mixin custom-scrollbar($size, $foreground-color, $background-color) {
+@mixin customScrollbar($size, $foreground-color, $background-color) {
   // For Google Chrome
   ::-webkit-scrollbar {
       width:  $size;
@@ -184,29 +184,29 @@ $page-nav-btn-panda-clr: #737373;
  	text-shadow: $x-height $y-height $blur $clr;
 }
 
-@mixin textShadow-main-color($x-height, $y-height, $blur, $opacity) {
+@mixin textShadowMainColor($x-height, $y-height, $blur, $opacity) {
  	text-shadow: $x-height $y-height $blur rgba($main-color-r, $main-color-g, $main-color-b, $opacity);
 }
 
-@mixin ic-shadow-anarenk($weight,$spread,$opacity){
+@mixin insetShadowMainColor($weight,$spread,$opacity){
   -webkit-box-shadow: inset 0px 0px $weight $spread rgba($main-color-r, $main-color-g, $main-color-b, $opacity);
 	-moz-box-shadow:   inset 0px 0px $weight $spread rgba($main-color-r, $main-color-g, $main-color-b, $opacity);
 	box-shadow:         inset 0px 0px $weight $spread rgba($main-color-r, $main-color-g, $main-color-b, $opacity);
 }
 
-@mixin boxshadow($x, $y, $weight, $clr) {
+@mixin boxShadow($x, $y, $weight, $clr) {
  	-webkit-box-shadow: $x $y $weight $clr;
 	-moz-box-shadow:    $x $y $weight $clr;
 	box-shadow:         $x $y $weight $clr;
 }
 
-@mixin boxshadow-main-color($opacity, $weight) {
+@mixin boxShadowMainColor($opacity, $weight) {
  	-webkit-box-shadow: 0px 0px $weight rgba($main-color-r, $main-color-g, $main-color-b, $opacity);
 	-moz-box-shadow:    0px 0px $weight rgba($main-color-r, $main-color-g, $main-color-b, $opacity);
 	box-shadow:         0px 0px $weight rgba($main-color-r, $main-color-g, $main-color-b, $opacity);
 }
 
-@mixin boxshadow-second-color($opacity, $weight) {
+@mixin boxshadowSecondColor($opacity, $weight) {
  	-webkit-box-shadow: 0px 0px $weight rgba($second-color-r, $second-color-g, $second-color-b, $opacity);
 	-moz-box-shadow:    0px 0px $weight rgba($second-color-r, $second-color-g, $second-color-b, $opacity);
 	box-shadow:         0px 0px $weight rgba($second-color-r, $second-color-g, $second-color-b, $opacity);
@@ -228,11 +228,11 @@ $page-nav-btn-panda-clr: #737373;
 	filter: brightness($val);
 }
 
-@mixin translate-X($val){
+@mixin translateX($val){
 	transform: translateX($val);
 }
 
-@mixin translate-Y($val){
+@mixin translateY($val){
 	transform: translateY($val);
 }
 
@@ -250,7 +250,7 @@ $page-nav-btn-panda-clr: #737373;
     border-left-style: solid;
     border-right-style: solid;
     border-left-width: $leftRightWidth;
-    border-right-width: $leftRightWidth; 
+    border-right-width: $leftRightWidth;
 }
 
 @mixin fixedCustom($top,$right,$bottom,$left){position: fixed; top:$top; right: $right; bottom: $bottom; left: $left;}
@@ -261,11 +261,11 @@ $page-nav-btn-panda-clr: #737373;
 	-webkit-transition: $property $time $animation; transition: $property $time $animation;
 }
 
-@mixin line-limit($line-clamp){
+@mixin lineLimit($line-clamp){
 	display: -webkit-box; -webkit-line-clamp: $line-clamp;-webkit-box-orient: vertical; overflow: hidden;text-overflow: ellipsis;
 }
 
-@mixin panda-prefixer($property, $value, $prefixes) {
+@mixin pandaPrefixer($property, $value, $prefixes) {
 	@each $prefix in $prefixes {
 		@if $prefix == webkit {
 			-webkit-#{$property}: #{$value};
@@ -382,26 +382,26 @@ $breakpoints: (
 
 // Single side border radius
 // -------------------------
-@mixin border-top-radius($radius: $border-radius-default) {
+@mixin borderTopRadius($radius: $border-radius-default) {
 	border-top-right-radius: $radius;
 	border-top-left-radius: $radius;
 }
-@mixin border-right-radius($radius: $border-radius-default) {
+@mixin borderRightRadius($radius: $border-radius-default) {
 	border-top-right-radius: $radius;
 	border-bottom-right-radius: $radius;
 }
-@mixin border-bottom-radius($radius: $border-radius-default) {
+@mixin borderBottomRadius($radius: $border-radius-default) {
 	border-bottom-right-radius: $radius;
 	border-bottom-left-radius: $radius;
 }
-@mixin border-left-radius($radius: $border-radius-default) {
+@mixin borderLeftRadius($radius: $border-radius-default) {
 	border-top-left-radius: $radius;
 	border-bottom-left-radius: $radius;
 }
 
 // Transforms
 // ----------
-@mixin transform-single($property, $value) {
+@mixin transformSingle($property, $value) {
 	@if $browser-prefixes {
 		@include panda-prefixer(transform, #{$property}unquote("(")#{$value}unquote(")"), webkit moz ms o spec);
 	}
@@ -475,7 +475,7 @@ $breakpoints: (
 
 // Placeholder text
 // ----------------
-@mixin placeholder-color($color: $placeholder-color-default) {
+@mixin placeholderColor($color: $placeholder-color-default) {
 	@if $browser-prefixes {
 		&::-webkit-input-placeholder {
 			color: $color;
@@ -585,7 +585,7 @@ $breakpoints: (
 
 // Hide text
 // ---------
-@mixin hide-text {
+@mixin hideText {
 	font: 0/0 a;
 	color: transparent;
 	text-shadow: none;
@@ -605,7 +605,7 @@ $breakpoints: (
 
 // Center an element vertically
 // ----------------------------
-@mixin vert-centerer {
+@mixin vertCenterer {
 	@include relative(50%);
 	@if $browser-prefixes {
 		@include panda-prefixer(transform, translateY(-50%), webkit moz ms o spec);
@@ -917,7 +917,7 @@ h5{font-size: 1em;}
 .rotate90back{-moz-transform: rotate(-90deg); -webkit-transform: rotate(-90deg); transform: rotate(-90deg);}
 
 .rotate180{-moz-transform: rotate(180deg); -webkit-transform: rotate(180deg); transform: rotate(180deg); }
-.rotate180back{-moz-transform: rotate(-180deg); -webkit-transform: rotate(-180deg); transform: rotate(-180deg); } 
+.rotate180back{-moz-transform: rotate(-180deg); -webkit-transform: rotate(-180deg); transform: rotate(-180deg); }
 
 .scale1-1{transform: scale(1.1,1.1);}
 .scale1-2{transform: scale(1.2,1.2);}
@@ -955,7 +955,7 @@ h5{font-size: 1em;}
 	-moz-box-shadow:    0px 2px 5px 0px rgba(50, 50, 50, 0.55);
 	box-shadow:         0px 2px 5px 0px rgba(50, 50, 50, 0.55);
 }
- 
+
 .input-inner-shadow{
 	border: none;
 	-webkit-box-shadow: inset 0px 1px 6px 0px rgba(198, 198, 198, 0.75);
@@ -976,7 +976,7 @@ $social-link-bg: #fff;
 $social-link-clr: #111923;
 
 .like-share {word-spacing: 10px;}
-.like-share a{display: inline-block; background: $social-link-bg; color: $social-link-clr; @extend .text-center, .border-rad-50per; 
+.like-share a{display: inline-block; background: $social-link-bg; color: $social-link-clr; @extend .text-center, .border-rad-50per;
 	width: 45px; height: 45px; line-height: 45px; font-size: 1.4em; }
 
 $facebook-clr: #3b5998;
@@ -1021,11 +1021,11 @@ $google-plus-clr: #e02f2f;
 /* Article */
 article,.article-content{@extend .float-clear-wide;}
 
-.article-banner img{width: 100%;}  
+.article-banner img{width: 100%;}
 .article-banner{@extend .no-overflow, .fullwidth;}
 .article-title{margin: 0; @extend .text-bold; font-size: 1.3em; margin-top: 30px;}
 
-.article-gallery{@extend .row-block}    
+.article-gallery{@extend .row-block}
 .article-gallery-item{display: block;}
 .article-gallery-item img{width: 100%;}
 .article-gallery-item-header{display: block; @extend .section; }
@@ -1041,7 +1041,7 @@ article,.article-content{@extend .float-clear-wide;}
 .pagination .sayfa-num:hover{background: #ffbd0a; transition: all 300ms;}
 
 /* Sidebar */
-.sidebar-left{padding-left: 0; margin-right: 0px;}  
+.sidebar-left{padding-left: 0; margin-right: 0px;}
 .sidebar-right{margin-left: 0;}
 
 /* Sidebar Widget */
@@ -1052,14 +1052,14 @@ article,.article-content{@extend .float-clear-wide;}
 .sidebar-nav li ul {
   width: 100%;
   position: relative;
-  top: 0; 
+  top: 0;
   left: 0;
   margin-top: 0;
   padding: 0;
-  margin: 0;    
-}   
+  margin: 0;
+}
 .sidebar-submenu li a{  background: #fff; color: #444;}
-.sidebar-submenu li a:hover{  background: #f7f7f7;} 
+.sidebar-submenu li a:hover{  background: #f7f7f7;}
 
 /* Accordion Panel */
 .panel-container table tr td{padding: 10px;}
@@ -1067,7 +1067,7 @@ article,.article-content{@extend .float-clear-wide;}
 .panel-container .box-title{float: left; padding-left: 15px; @extend  .text-left; margin-bottom: 20px;}
 .panel-container .box-title:hover{text-decoration: none;}
 .panel-container .box-title .fa{margin-right:15px;}
-.panel-gallery{width: 100%;} 
+.panel-gallery{width: 100%;}
 .panel-gallery a{display: block; margin-bottom: 20px;}
 .panel-gallery a img{width: 100%;}
 .panel-gallery-item-wrapper{@extend .float-clear; width: 100%; transition: all 350ms ease;}
@@ -1085,7 +1085,7 @@ article,.article-content{@extend .float-clear-wide;}
 .subscribe-form #subscribe:-ms-input-placeholder{color: #393939; }
 
 .subscribe-form .subscribe-btn-panda{width: 93px; height: 46px;}
-.subscribe-form .subscribe-btn-panda{float: left;} 
+.subscribe-form .subscribe-btn-panda{float: left;}
 
 /* Portfolio item */
 a.portfolio-item{display: block; margin-bottom: 20px;}
@@ -1118,7 +1118,7 @@ a.portfolio-item img{width: 100%; display: block; @extend .paddingLeftRight-0,.b
 .right-side-butonlar .search .Field{width: 180px;}
 .right-side-butonlar .search .Field input{margin-left: 10px; width: 160px; height: 100%; font-size: 14px; color: #333333; background: transparent; border-style: none; outline: none; -webkit-appearance: none;}
 .right-side-butonlar .sosyal-ikonlar{position: absolute; opacity: 0.85; top: 102px; right: -251px; margin: -66px 0px 0px 0px; width: 301px;}
-.right-side-butonlar .sosyal-ikonlar:hover{right: -1px;} 
+.right-side-butonlar .sosyal-ikonlar:hover{right: -1px;}
 
 .iletisim iframe{width: 100%; min-height: 250px;}
 
@@ -1129,17 +1129,17 @@ a.portfolio-item img{width: 100%; display: block; @extend .paddingLeftRight-0,.b
 
 /* newsletter permissions */
 .permissions.custom-checbox label{position: relative; left: 20px;}
-.permissions.custom-checbox .check-mask{display: block; width: 12px; height: 12px; position: absolute; 
+.permissions.custom-checbox .check-mask{display: block; width: 12px; height: 12px; position: absolute;
 			 top:7px; left: -19px; z-index: 2; background: url("../images/izin-unchecked.png");}
 
 .permissions .checked-box{background: url("../images/izin-checked.png") !important;}
-.permissions.custom-checbox input{visibility: hidden; opacity: 0;} 
+.permissions.custom-checbox input{visibility: hidden; opacity: 0;}
 
-.permissions{padding-left: 0px;height: 44px; margin-top: 13px;} 
+.permissions{padding-left: 0px;height: 44px; margin-top: 13px;}
 .permissions input{margin-left: 10px; margin-right: 4px; opacity: 0;}
 .permissions a{color: #4f4f4f; border-bottom: 1px solid #4f4f4f; text-decoration: none;}
-.permissions a:hover{color: #666666;} 
-.permissions label{position: relative; left: 20px; @extend .pointer} 
+.permissions a:hover{color: #666666;}
+.permissions label{position: relative; left: 20px; @extend .pointer}
 
 /* Boxes */
 .box-block{display: block; overflow:hidden; position: relative;}
@@ -1150,12 +1150,12 @@ body{font-family: $site-font; color: #57545c;}
 li{list-style: none;}
 a,a:hover{text-decoration: none;}
 
-.bullet-revolver{display:block; position: relative; left: -30px; top:16px; content:'\00b7'; 
+.bullet-revolver{display:block; position: relative; left: -30px; top:16px; content:'\00b7';
 				font-size:100px; width: 20px; height: 20px; text-align: center; line-height: 20px;}
 
 ul{padding: 0;}
 
-/* Crossbrowser fixes */ 
+/* Crossbrowser fixes */
 input[type=text]::-ms-clear {
     display: none;
 }
@@ -1169,7 +1169,7 @@ textarea{min-height: 114px;}
 }
 
 /* titles */
-.box-title{@extend .float-clear-wide, .text-center, .text-bold, .paddingTopBottom-15; line-height: 100%; 
+.box-title{@extend .float-clear-wide, .text-center, .text-bold, .paddingTopBottom-15; line-height: 100%;
 				display: block;}
 
 .section-title{@extend .section, .text-center, .text-bold, .paddingTop-15; display: block; margin-bottom:0;}
@@ -1179,5 +1179,3 @@ textarea{min-height: 114px;}
 .section-title-thin{@extend .section, .text-center,.text-light, .paddingTop-15; display: block; margin-bottom:0;}
 
 .section-description{@extend .section, .text-center,.text-light, .paddingBottom-15; display: block;  }
-
-  
