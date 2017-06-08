@@ -996,11 +996,52 @@ $google-plus-clr: #e02f2f;
 .like-share a:hover .fa-linkedin{color: $linkedin-clr; @extend .transitionAll-350ms;}
 .like-share a:hover .fa-google-plus{color: $google-plus-clr; @extend .transitionAll-350ms;}
 
-/* Up button */
+/* goToTop button */
 .btn-panda.goToTop{display: none; position: fixed; z-index: 9999; bottom: 88px; right: 60px; width: 44px; line-height: 44px; opacity: 0.8; border-radius: 3px;
         background: $main-color; border: none; height: 44px; font-size: 3em; color: #fff; text-align: center;}
 
 .btn-panda.goToTop .fa{position: relative; top: -4px;}
+
+
+/* Over upper wrapper */
+.over-upper-wrapper{position: relative; left: 0; top: 0; height: 0.1px; box-sizing: border-box; @extend .float-clear; width: 100%;}
+.over-upper-wrapper .container{position: relative; top: 0; left: 0; height: 0.1px; box-sizing: border-box;}
+.over-upper-content{position: absolute; right: 0; width: 100%; z-index: 2;}
+
+/* Box BLock */
+.box-block-container,.box-block-container .box-block,.box-block-container .box-block-content,
+.box-block-container .box-block-header,.box-block-container .box-block-footer{display: block; @extend .float-clear-wide,.relative; }
+
+.box-block-header-top,.box-block-header-middle,.box-block-header-bottom,
+.box-block-content-top,.box-block-content-middle,.box-block-content-bottom,
+.box-block-footer-top,.box-block-footer-middle,.box-block-footer-bottom
+{display: block; @extend .float-clear-wide,.relative; }
+
+/* Form */
+.form-container,.form-container .form,.form-container .form-content,.form-container .form-header,.form-container .form-footer{display: block; @extend .float-clear-wide,.relative; }
+
+/* List box */
+.list-box-container,.list-box-container .list-box,.list-box-container .list-box-title,
+.list-box-container .list-box-text{display: block; @extend .float-clear-wide,.relative;}
+.list-box-content{float: left;max-width: 85%;}
+.list-box{margin-bottom: 20px;}
+.list-box-image{max-width: 20%;}
+.list-box-image.left-floated{margin-right: 15px;}
+.list-box-image.right-floated{margin-left: 15px;}
+.list-box-image img{display: block; width: 100%;}
+
+/* Info Box */
+.info-box-container,.info-box-container .info-box,.info-box-container .info-box-title,
+.info-box-container .info-box-header,.info-box-container .info-box-content,.info-box-container .info-box-footer{display: block; @extend .float-clear-wide,.relative;}
+
+/* inline buttons */
+.inline-buttons{@extend .float-clear-wide,.relative; }
+.inline-buttons .btn,.inline-buttons .btn-panda{display: inline-block; margin-left: 20px;}
+
+/* Quantity Button */
+.quantity-btn-container{@extend .float-clear-wide;}
+.quantity-btn-container .quantity-btn{@extend .float-wide;}
+.quantity-btn-container .quantity-btn span{display: inline-block;}
 
 /* Page Header */
 .page-header{ @extend .float-clear-wide, .no-overflow;}
@@ -1037,8 +1078,8 @@ article,.article-content{@extend .float-clear-wide;}
 .page-nav-btn-panda .fa{font-size: 18px; @extend .text-bold;}
 
 .pagination{float: left; clear: both; margin-bottom: 30px; width: 100%; padding: 10px; background: #fff;}
-.pagination .sayfa-num{display: inline-block; color: $page-nav-btn-panda-clr; font-size: 15px; margin-left: 4px; width: 35px; height: 35px; border: 1px solid #e6e6e6; text-decoration: none; text-align: center; line-height: 35px;}
-.pagination .sayfa-num:hover{background: #ffbd0a; transition: all 300ms;}
+.pagination .page-num{display: inline-block; color: $page-nav-btn-panda-clr; font-size: 15px; margin-left: 4px; width: 35px; height: 35px; border: 1px solid #e6e6e6; text-decoration: none; text-align: center; line-height: 35px;}
+.pagination .page-num:hover{background: #ffbd0a; transition: all 300ms;}
 
 /* Sidebar */
 .sidebar-left{padding-left: 0; margin-right: 0px;}
@@ -1060,17 +1101,6 @@ article,.article-content{@extend .float-clear-wide;}
 }
 .sidebar-submenu li a{  background: #fff; color: #444;}
 .sidebar-submenu li a:hover{  background: #f7f7f7;}
-
-/* Accordion Panel */
-.panel-container table tr td{padding: 10px;}
-.panel-container ul{padding-left: 0;}
-.panel-container .box-title{float: left; padding-left: 15px; @extend  .text-left; margin-bottom: 20px;}
-.panel-container .box-title:hover{text-decoration: none;}
-.panel-container .box-title .fa{margin-right:15px;}
-.panel-gallery{width: 100%;}
-.panel-gallery a{display: block; margin-bottom: 20px;}
-.panel-gallery a img{width: 100%;}
-.panel-gallery-item-wrapper{@extend .float-clear; width: 100%; transition: all 350ms ease;}
 
 /* Subscribe Bar */
 .subscribe-bar{@extend .paddingTopBottom-5;}
