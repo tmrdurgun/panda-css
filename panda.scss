@@ -1018,7 +1018,8 @@ $google-plus-clr: #e02f2f;
 {display: block; @extend .float-clear-wide,.relative; }
 
 /* Form */
-.form-container,.form-container .form,.form-container .form-content,.form-container .form-header,.form-container .form-footer{display: block; @extend .float-clear-wide,.relative; }
+.form-container,.form-container .form,.form-container .form-content,.form-container .form-header,
+.form-container .form-footer{display: block; @extend .float-clear-wide,.relative; }
 
 /* List box */
 .list-box-container,.list-box-container .list-box,.list-box-container .list-box-title,
@@ -1032,7 +1033,8 @@ $google-plus-clr: #e02f2f;
 
 /* Info Box */
 .info-box-container,.info-box-container .info-box,.info-box-container .info-box-title,
-.info-box-container .info-box-header,.info-box-container .info-box-content,.info-box-container .info-box-footer{display: block; @extend .float-clear-wide,.relative;}
+.info-box-container .info-box-header,.info-box-container .info-box-content,
+.info-box-container .info-box-footer{display: block; @extend .float-clear-wide,.relative;}
 
 /* inline buttons */
 .inline-buttons{@extend .float-clear-wide,.relative; }
