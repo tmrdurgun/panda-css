@@ -1,0 +1,25 @@
+{
+  "name": "panda-css",
+  "version": "1.0.0",
+  "description": "a lightweight css utility helper library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmrdurgun/panda-css.git"
+  },
+  "keywords": [
+    "css",
+    "scss",
+    "sass",
+    "utility"
+  ],
+  "author": "Tamer Durgun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tmrdurgun/panda-css/issues"
+  },
+  "homepage": "https://github.com/tmrdurgun/panda-css#readme"
+}
